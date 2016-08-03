@@ -1,0 +1,24 @@
+- All that's required is a component, which is encapsulated code that handles presentation, state, and behavior.
+ - Components consist of presentation, state, and behavior. Presentation is HTML, state is jS, behavior is JS.
+ - React uses a hierarchy of components that are inserted into the DOM to recognize state change, and react accordingly.
+ - Problems with two-way data binding
+  - The biggest is that they are expensive in terms of computing resources.
+  - another is that one event can trigger another ad infinitum.
+- one way data binding
+  - When building a component hierarchy, its state and presentation logic are combined to produce a user interface. Whenever the state changes, it's automatically recombined with the presentation logic and a new user interface is produced.
+  - changes are not automatically propagated to the state.
+- design principles
+  - Though its concepts aren't fully mainstream, React is accessible to a wide range of developers of varying experience levels.
+- design principles
+    React can be gradually adopted for small features and doesn't require an entire application to be rewritten with it.
+
+    Well-designed React components can be composed together even if they're built by different people.
+
+    When something goes wrong, React provides breadcrumbs to trace the mistake to the source of the problem.
+- React.createElement is being called with 3 arguments, type(h1), props(null), child('hello world')
+  - props is the data being passed into the element.
+  - this returns a new react element object which is stored in the element variable. Nothing has been added to the DOM.
+- The ReactDOM.render() function uses the ReactElement to create a component hierarchy and then inserts it into the DOM as the child of the DOMElement. The ReactDOM.render() function controls the contents of the DOMElement. Any existing content inside the DOMElement is replaced when the ReactDOM.render() function is invoked.
+- The specification object must return a single react element. ReactDOM.render calls the components render function when rendering the element to the page.
+- The only requirement is a type class. Props and child can be omitted if they do not exist.
+- The initial value of this.state is whatever is returned from the get initial state function.
